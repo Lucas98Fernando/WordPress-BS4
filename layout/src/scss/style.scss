@@ -1,0 +1,20 @@
+// Variáveis para cor do tema
+$my-color-1: #219ebc;
+$my-color-2: #023047;
+$my-color-3: #ffb703;
+
+// Inserindo as cores personalizadas nas cores do tema do Bootstrap
+$theme-colors: (
+  "my-color-1": $my-color-1,
+  "my-color-2": $my-color-2,
+  "my-color-3": $my-color-3,
+);
+
+/*
+    // Classes personalizadas utilizando as variáveis do SCSS
+    $body-bg: $my-color-1;
+    $link-color: $my-color-3; 
+*/
+
+// Importando o Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";

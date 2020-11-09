@@ -3,12 +3,12 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 // Task with gulp to convert Sass to CSS
-gulp.task('sass', gulp.series (function () {
+gulp.task('sass', gulp.series(function () {
     // Caminho dos arquivos que serão convertidos
     return gulp.src(['node_modules/bootstrap/scss/*.scss', 'src/scss/*.scss']).pipe(sass()).pipe(gulp.dest('src/css'));
 }));
 
-gulp.task('watch', gulp.series(function() {
+gulp.task('watch', gulp.series(function () {
     gulp.watch(['node_modules/bootstrap/scss/*.scss', 'src/scss/*.scss'], gulp.parallel(['sass']));
 }));
 
