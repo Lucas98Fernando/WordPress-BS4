@@ -1,0 +1,42 @@
+Etapas para criar temas do WordPress com Bootstrap
+
+Requisitos: 
+
+- Sass
+- node.js
+- npm
+- gulp
+
+- Passo-a-passo:
+
+Dentro da pasta de layout:
+
+> npm init
+> npm install boostrap
+> npm install jquery
+> npm install popper.js
+> npm install gulp --save-dev
+> npm install gulp-sass
+
+Pastas para serem criadas dentro da pasta layout:
+
+src
+- assets
+- css
+- js
+- scss
+index.html
+
+> Inserir dentro da pasta js, os módulos na pasta dist do bootstrap, popper (o do pooper fica dentro da pasta umd) e jquery
+
+Dentro da tag <head>
+> Alterar o caminho do CSS do Bootstrap utilizando CDN, para: css/bootstrap.css
+> Criar o caminho: css/style.css
+
+Antes do fechamento da tag </body>, na sequência abaixo, a ordem não pode ser alterada
+> Inserir o caminho do JS do jquery
+> Inserir o caminho do JS do popper.js
+> Inserir o caminho do JS do bootstrap
+
+> Criar o gulfile.js dentro da raíz da pasta layout
+> Executar o comando gulp no CMD 
