@@ -39,4 +39,10 @@ Antes do fechamento da tag </body>, na sequência abaixo, a ordem não pode ser 
 > Inserir o caminho do JS do bootstrap
 
 > Criar o gulfile.js dentro da raíz da pasta layout
-> Executar o comando gulp no CMD 
+> Executar o comando gulp no CMD
+
+Para importar o Bootstrap para o arquivo style.css dentro da pasta css: 
+> No arquivo scss/style.scss, executar o comando:
+> @import "node_modules/bootstrap/scss/bootstrap";
+
+Observação: As cores personalizadas no BS4 devem vir antes do @import no arquivo style.scss
