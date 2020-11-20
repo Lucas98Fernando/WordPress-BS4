@@ -20,14 +20,14 @@ Dentro da pasta de layout:
 <pre><code>npm install gulp --save-dev</code></pre>
 <pre><code>npm install gulp-sass</code></pre>
 
-<h2>Pastas para serem criadas dentro da pasta layout:</h2>
+<h2>Pastas e arquivos para serem criadas dentro da pasta layout:</h2>
 
 src
-- assets
-- css
-- js
-- scss
-index.html
+ - assets
+ - css
+ - js
+ - scss
+ - index.html
 
 <pre><code>Inserir dentro da pasta js criada, os módulos na pasta dist do bootstrap, popper (o do pooper fica dentro da pasta umd) e jquery</code></pre>
 
