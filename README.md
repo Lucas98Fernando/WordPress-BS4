@@ -1,4 +1,4 @@
-<h1 align="center">Boostrap 4 + WordPress utilizando o Gulp e o Sass</h1>
+<h1 align="center">Bootstrap 4 + WordPress utilizando o Gulp e o Sass</h1>
 <p align="center">Passo-a-passo com as etapas para criar temas do WordPress com Bootstrap</p>
 
 <h2>Pré-Requisitos:</h2> 
