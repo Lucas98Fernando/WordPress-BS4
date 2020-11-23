@@ -29,7 +29,7 @@ src
  - scss
  - index.html
 
-<pre><code>Inserir dentro da pasta js criada, os módulos na pasta dist do bootstrap, popper (o do pooper fica dentro da pasta umd) e jquery</code></pre>
+<pre><code>Inserir dentro da pasta js criada os módulos js na pasta dist do bootstrap, popper (o do pooper fica dentro da pasta umd) e jquery</code></pre>
 
 <p>Dentro da tag &lt;head&gt; do arquivo <strong>index.html</strong> criado na raíz da pasta <strong>layout</strong> </p>
 
@@ -42,11 +42,28 @@ src
 <pre><code>Inserir o caminho do JS do bootstrap</code></pre>
 
 <h2>Criar as tasks com o gulp para automatizar o desenvolvimento</h2>
-<pre><code>Criar o gulfile.js dentro da raíz da pasta layout</pre></code>
-<pre><code>Executar o comando gulp no CMD</pre></code>
+<pre><code>Criar o gulfile.js dentro da raíz da pasta layout e copiar o código abaixo:</pre></code>
+<pre><code>
+// Variables gull and Sass
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+// Task with gulp to convert Sass to CSS
+gulp.task('sass', gulp.series(function () {
+    // Caminho dos arquivos que serão convertidos
+    return gulp.src(['node_modules/bootstrap/scss/*.scss', 'src/scss/*.scss']).pipe(sass()).pipe(gulp.dest('src/css'));
+}));
+
+gulp.task('watch', gulp.series(function () {
+    gulp.watch(['node_modules/bootstrap/scss/*.scss', 'src/scss/*.scss'], gulp.parallel(['sass']));
+}));
+
+gulp.task('default', gulp.series(['sass', 'watch']));</code></pre>
+<pre><code>Executar o comando <strong>gulp</strong> no CMD</pre></code>
 
 <h2>Para importar o Bootstrap para o arquivo style.css dentro da pasta css utilizando o gulp e o scss:</h2> 
 <p>No arquivo scss/style.scss, executar o comando:</p>
-<pre><code>@import "node_modules/bootstrap/scss/bootstrap";</code></pre>
+<pre><code>@import "node_modules/bootstrap/scss/bootstrap";
+</code></pre>
 
 <strong>Observação: As cores personalizadas no BS4 devem vir antes do @import no arquivo style.scss<strong>
